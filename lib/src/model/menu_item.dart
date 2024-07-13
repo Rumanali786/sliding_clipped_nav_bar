@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class BarItem {
   /// ber item icon which shown when item is inactive.
-  final IconData icon;
+  final Widget icon;
 
   /// active color of the item, required when use SlidingClippedNavBar.coloredItems
   final Color? activeColor;
