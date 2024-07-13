@@ -228,12 +228,15 @@ class _NavBarButtonState extends State<NavBarButton>
                     ),
                   ),
                 ),
-                child: Container(
-                  width: 6,
-                  height: 6,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: activeColor,
+                child: Padding(
+                  padding: const EdgeInsets.only(bottom: 10),
+                  child: Container(
+                    width: 6,
+                    height: 6,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: activeColor,
+                    ),
                   ),
                 ),
               ),
