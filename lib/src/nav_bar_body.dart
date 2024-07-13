@@ -38,7 +38,7 @@ class NavBarBody extends StatelessWidget {
       clipBehavior: Clip.hardEdge,
       height: 60 + bottomPading,
       decoration: BoxDecoration(
-        color: Colors.red,
+        color: backgroundColor,
       ),
       alignment: Alignment.center,
       child: Row(
