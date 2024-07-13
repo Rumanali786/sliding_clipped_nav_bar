@@ -194,15 +194,18 @@ class _NavBarButtonState extends State<NavBarButton>
                   ),
                 ),
               ),
-              child: Container(
-                width: deviceWidth / widget.itemCount,
-                alignment: Alignment.center,
-                height: textHeight(title, getTextStyle()),
-                child: Text(
-                  title,
-                  overflow: TextOverflow.clip,
-                  maxLines: 1,
-                  style: getTextStyle(),
+              child: Padding(
+                padding: const EdgeInsets.only(bottom: 20),
+                child: Container(
+                  width: deviceWidth / widget.itemCount,
+                  alignment: Alignment.center,
+                  height: textHeight(title, getTextStyle()),
+                  child: Text(
+                    title,
+                    overflow: TextOverflow.clip,
+                    maxLines: 1,
+                    style: getTextStyle(),
+                  ),
                 ),
               ),
             ),
@@ -229,7 +232,7 @@ class _NavBarButtonState extends State<NavBarButton>
                   ),
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.only(bottom: 10),
+                  padding: const EdgeInsets.only(bottom: 20),
                   child: Container(
                     width: 6,
                     height: 6,
