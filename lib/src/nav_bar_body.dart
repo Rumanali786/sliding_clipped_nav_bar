@@ -46,20 +46,23 @@ class NavBarBody extends StatelessWidget {
         children: buttons.map(
           (BarItem item) {
             final int buttonIndex = buttons.indexOf(item);
-            return NavBarButton(
-              icon: item.icon,
-              size: iconSize,
-              title: item.title,
-              activeColor: item.activeColor ?? activeColor!,
-              inactiveColor: item.inactiveColor ?? inactiveColor!,
-              index: buttonIndex,
-              isSelected: buttonIndex == selectedIndex ? true : false,
-              onTap: onButtonPress,
-              slidingCardColor: backgroundColor,
-              itemCount: buttons.length,
-              fontSize: fontSize,
-              fontWeight: fontWeight,
-              fontStyle: fontStyle,
+            return Padding(
+              padding: const EdgeInsets.only(bottom: 10),
+              child: NavBarButton(
+                icon: item.icon,
+                size: iconSize,
+                title: item.title,
+                activeColor: item.activeColor ?? activeColor!,
+                inactiveColor: item.inactiveColor ?? inactiveColor!,
+                index: buttonIndex,
+                isSelected: buttonIndex == selectedIndex ? true : false,
+                onTap: onButtonPress,
+                slidingCardColor: backgroundColor,
+                itemCount: buttons.length,
+                fontSize: fontSize,
+                fontWeight: fontWeight,
+                fontStyle: fontStyle,
+              ),
             );
           },
         ).toList(),
