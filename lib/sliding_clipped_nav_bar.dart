@@ -17,6 +17,7 @@ class SlidingClippedNavBar extends StatelessWidget {
 
   /// FontSize of the text.
   final double? fontSize;
+  final double? navHeight;
 
   /// FontWeight of the text.
   final FontWeight? fontWeight;
@@ -48,7 +49,7 @@ class SlidingClippedNavBar extends StatelessWidget {
     this.fontWeight,
     this.fontStyle,
     this.iconSize = 30,
-    this.backgroundColor = Colors.white,
+    this.backgroundColor = Colors.white, this.navHeight,
   })  : assert(
             !barItems.any((BarItem element) =>
                 (element.activeColor != null || element.inactiveColor != null)),
@@ -70,6 +71,7 @@ class SlidingClippedNavBar extends StatelessWidget {
     this.fontWeight,
     this.fontStyle,
     this.iconSize = 30,
+    this.navHeight,
     this.backgroundColor = Colors.white,
   })  : assert(
             !barItems.any((BarItem element) =>
@@ -85,6 +87,7 @@ class SlidingClippedNavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return NavBarBody(
       buttons: barItems,
+      navHeight: navHeight,
       iconSize: iconSize,
       activeColor: _activeColor,
       inactiveColor: _inactiveColor,
