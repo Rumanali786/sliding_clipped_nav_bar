@@ -191,7 +191,7 @@ class _NavBarButtonState extends State<NavBarButton>
                 ),
               ),
               child: Padding(
-                padding: const EdgeInsets.only(bottom: 20),
+                padding: const EdgeInsets.only(bottom: 10),
                 child: Container(
                   width: deviceWidth / widget.itemCount,
                   alignment: Alignment.center,
