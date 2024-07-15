@@ -15,6 +15,8 @@ class NavBarBody extends StatelessWidget {
   final Color backgroundColor;
   final FontWeight? fontWeight;
   final double? fontSize;
+  final double? navHeight;
+
   final FontStyle? fontStyle;
 
   const NavBarBody({
@@ -28,15 +30,15 @@ class NavBarBody extends StatelessWidget {
     required this.backgroundColor,
     required this.fontWeight,
     required this.fontSize,
-    required this.fontStyle,
+    required this.fontStyle, this.navHeight,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final double bottomPading = MediaQuery.of(context).padding.bottom;
+    final double bottomPadding = MediaQuery.of(context).padding.bottom;
     return Container(
       clipBehavior: Clip.hardEdge,
-      height: 60 + bottomPading,
+      height: navHeight?? 60 + bottomPadding,
       decoration: BoxDecoration(
         color: backgroundColor,
       ),
