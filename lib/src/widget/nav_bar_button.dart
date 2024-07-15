@@ -101,11 +101,11 @@ class _NavBarButtonState extends State<NavBarButton>
   double textHeight(String text, TextStyle textStyle) => (TextPainter(
           text: TextSpan(text: text, style: textStyle),
           maxLines: 1,
-          textScaleFactor: MediaQuery.of(context).textScaleFactor,
+      textScaler: const TextScaler.linear(1.0),
           textDirection: Directionality.of(context))
         ..layout())
       .size
-      .height;
+      .height+10;
 
   @override
   Widget build(BuildContext context) {
